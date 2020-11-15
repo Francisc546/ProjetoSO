@@ -1,12 +1,18 @@
 #include "library.h"
 
 int main (int argc, char *argv[]){
-    exporta();
+    int e =  exporta();
+    if(e == -1){
+        printf("Erro na Exportacao");
+    }
+    else if (e ==1){
+        printf("Sucesso na Exportacao");
+    }
     return 1;
 }
 
 int exporta(){
-   int fd = open("monitorlog.txt",O_WRONLY |O_CREAT , S_IRUSR | S_IWUSR);
+   int fd = open("monitor.log",O_WRONLY |O_CREAT , S_IRUSR | S_IWUSR);
     if (fd == 0){
         return -1; //erro de exportação
     }
