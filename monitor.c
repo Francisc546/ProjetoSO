@@ -1,6 +1,8 @@
 #include "library.h"
 
 int main (int argc, char *argv[]){
+    socket_servidor();
+
     int e =  exporta();
     if(e == -1){
         printf("Erro na Exportacao");
@@ -34,7 +36,7 @@ int exporta(){
 
 /* Novo para a 2ª Entrega Comunicação do servidor (feito por socket stream) código tirado dos sockets ficheiro "unix-stream-server.c" */
 
-void socket_cliente(){
+void socket_servidor(){
     int sockfd, newsockfd, clilen, childpid, servlen;
     struct sockaddr_un cli_addr, serv_addr;
 
