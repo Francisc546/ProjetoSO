@@ -3,7 +3,7 @@
 #include <time.h>
 #include <string.h>
 #include <unistd.h>
-#include "lib.h"
+#include "library.h"
 
 typedef struct config{
         int num_centros;
