@@ -1,32 +1,35 @@
+
+#include <stdio.h>
+#include "library.h"
 #define MAXLINE 512
 
-/* Servidos do tipo socket stream.
-    Manda linhas recebidas de volta para o cliente */
+/*Cliente do tipo socket stream
+    Lê string de fp e envia para sockfd
+    Lê string de sockfd e envia para stdout*/
 
-str_echo(sockfd)
+str_cli(fd,sockfd)
+FILE *fp;
 int sockfd;
 {
-    int n, i;
-    char line[MAXLINE];
-
-    for(;;){
-        /* Lê uma linha do socket */
-        n = readline(sockfd, line, MAXLINE);
-        if (n == 0){
-            return;
-        }
-        else if (n < 0){
-            err_dump("str_echo: readline error");
-        }
+    int n;
+    char sendline[MAXLINE], recvline[MAXLINE+1];
+    
+    while(fgets(sendline, MAXLINE, fp) != NULL){
 /* 
-    Aqui o nosso trabalho
+    Aqui o nosso trabalho 
 */
-        for(i = 0; i <n-1; i++){
-            line[i] = line[i] +1;
-        }
-        /*Manda linha de volta para o socket, n conta com o \0 da string, caso contrário perdia-se sempre um caracter! */
-        if(writen(sockfd, line, n) != n){
-            err_dump("str_ercho: writen error");
-        }
+    /* Envia string para sockfd, Note-se que o \0 não é enviado */
+        n = strlen(sendline);
+        if(writen(sockfd, sendline, n) != n)
+            err_dmp("str_cli: writen error on socket");
+        /* Tenta ler string do sockfd. Note-se que tem de terminar a string com \0*/
+        n = readline(sockfd, recvline, MAXLINE);
+        if (n<0)
+            err_dump("str_cli:readline error");
+        recvline[n] = 0;
+        /* Envia string para stdout */
+        fputs(recvline, stdout);
     }
+    if(ferror(fp))
+        err_dump("str_cli: error reading file");
 }
