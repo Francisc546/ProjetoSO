@@ -7,7 +7,7 @@
     Lê string de fp e envia para sockfd
     Lê string de sockfd e envia para stdout*/
 
-str_cli(fd,sockfd)
+str_cli(fp,sockfd)
 FILE *fp;
 int sockfd;
 {
