@@ -14,7 +14,7 @@ int sockfd;
     
     while(fgets(sendline, MAXLINE, fp) != NULL){
 /* 
-    
+    Aqui o nosso trabalho 
 */
     /* Envia string para sockfd, Note-se que o \0 não é enviado */
         n = strlen(sendline);

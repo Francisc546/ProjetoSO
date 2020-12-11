@@ -19,7 +19,7 @@ int sockfd;
             err_dump("str_echo: readline error");
         }
 /* 
-
+    Aqui o nosso trabalho
 */
         for(i = 0; i <n-1; i++){
             line[i] = line[i] +1;
