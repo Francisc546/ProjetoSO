@@ -26,7 +26,7 @@ int sockfd;
             line[i] = line[i] +1;
         }
         /*Manda linha de volta para o socket, n conta com o \0 da string, caso contrário perdia-se sempre um caracter! */
-        if(writen(sockfd, line, n) != n){
+        if(written(sockfd, line, n) != n){
             err_dump("str_ercho: writen error");
         }
     }
