@@ -26,7 +26,7 @@ int nbytes;
 /* Escreve nbytes num ficheiro/socket.
     Bloqueia até conseguir escrever os nbytes ou dar erro */
 
-int written(fd, ptr, nbytes)
+int writen(fd, ptr, nbytes)
 int fd;
 char *ptr;
 int nbytes;
