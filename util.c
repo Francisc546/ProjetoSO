@@ -26,9 +26,9 @@ int nbytes;
 /* Escreve nbytes num ficheiro/socket.
     Bloqueia até conseguir escrever os nbytes ou dar erro */
 
-int writen(fd, ptr, nbytes)
-int fd;
-char *ptr;
+int written(fd, ptr, nbytes)
+ínt fd;
+chat *ptr;
 int nbytes;
 {
     int nleft, nwritten;
@@ -50,7 +50,7 @@ int nbytes;
 
 int readline(fd, ptr, maxlen)
 int fd;
-char *ptr;
+chat *ptr;
 int maxlen;
 {
     int n, rc;
