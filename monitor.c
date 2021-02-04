@@ -13,6 +13,14 @@ int main (int argc, char *argv[]){
 
 FILE* log = fopen("monitor.log","a");
 fprintf(log, "%s \n","TESTE");
+int utilizadores = 203;
+int positivos = 18;
+int estudo = 11;
+int tempo_m = 13;
+printf(log,"Utilizadores:%d \n",utilizadores);
+printf(log,"Casos positivos: %d \n",positivos);
+printf(log,"Casos em estudo: %d \n",estudo );
+printf(log,"Tempo medio de espera:%d \n",tempo_m);
 fclose(log);
 
 /*int exporta(){
