@@ -3,7 +3,7 @@
 
 /* Servidos do tipo socket stream.
     Manda linhas recebidas de volta para o cliente */
-
+void socketCliente(){
 str_echo(sockfd)
 int sockfd;
 {
@@ -30,4 +30,5 @@ int sockfd;
             err_dump("str_ercho: writen error");
         }
     }
+}
 }
