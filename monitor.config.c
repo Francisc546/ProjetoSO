@@ -6,7 +6,7 @@
 /*Cliente do tipo socket stream
     Lê string de fp e envia para sockfd
     Lê string de sockfd e envia para stdout*/
-void socketServidor(){
+void socketCliente(){
 str_cli(fp,sockfd)
 FILE *fp;
 int sockfd;

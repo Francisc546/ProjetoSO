@@ -3,7 +3,7 @@
 
 /* Servidos do tipo socket stream.
     Manda linhas recebidas de volta para o cliente */
-void socketCliente(){
+void socketServidor(){
 str_echo(sockfd)
 int sockfd;
 {
