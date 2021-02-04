@@ -7,6 +7,9 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 
+void socketCliente();
+void socketServidor();
+
 #define UNIXSTR_PATH "/tmp/so20212044718"
 #define UNIXDG_PATH "/tmp/s.unixdfddffdfdgx"
 #define UNIXDG_TMP "/tmp/dgXXXXXfdjhfdjhfdXX"
