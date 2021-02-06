@@ -6,7 +6,7 @@
 /*Cliente do tipo socket stream
     Lê string de fp e envia para sockfd
     Lê string de sockfd e envia para stdout*/
-void socketCliente(){
+
 str_cli(fp,sockfd)
 FILE *fp;
 int sockfd;
@@ -32,5 +32,4 @@ int sockfd;
     }
     if(ferror(fp))
         err_dump("str_cli: error reading file");
-}
 }
