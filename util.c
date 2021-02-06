@@ -27,8 +27,8 @@ int nbytes;
     Bloqueia até conseguir escrever os nbytes ou dar erro */
 
 int written(fd, ptr, nbytes)
-ínt fd;
-chat *ptr;
+int fd;
+char *ptr;
 int nbytes;
 {
     int nleft, nwritten;
@@ -50,7 +50,7 @@ int nbytes;
 
 int readline(fd, ptr, maxlen)
 int fd;
-chat *ptr;
+char *ptr;
 int maxlen;
 {
     int n, rc;
